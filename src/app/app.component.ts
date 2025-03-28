@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-})
+})  //metadata
 export class AppComponent {
-  title = '3ALINFO8';
+  title = 'Esprit';
 }

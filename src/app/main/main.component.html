@@ -1,0 +1,31 @@
+<!-- list des users -->
+
+<!-- interpolation: afficher la valeur de la variable déclarée dans le .ts  {{}} -->
+<h1>{{date | date}}</h1>
+
+<input type="color" [(ngModel)]="color" />
+<!-- property Bata Binding -->
+<h1 [style.color]="color">Bonjour {{ ing | lowercase}}</h1>
+<p>
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores eveniet
+  repellat fugiat atque, ab fuga earum blanditiis nihil ut eligendi mollitia
+  possimus tenetur exercitationem. Nulla nemo tempore debitis at quos!
+</p>
+<img [src]="path" alt="" />
+<table border="1">
+  <tr>
+    <th>CIN</th>
+    <th>Nom</th>
+    <th>email</th>
+  </tr>
+  <tr></tr>
+</table>
+<button (click)="clickMe()">confirmer</button>
+<br><br>
+
+
+<!-- two ways databinding -->
+<div>
+  <input type="text" name="" id="" [(ngModel)]="username" />
+  <h2>the username is {{ username }}</h2>
+</div>
