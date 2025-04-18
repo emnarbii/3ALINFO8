@@ -1,24 +1,77 @@
 <form [formGroup]="residenceForm" (submit)="getFormValue()">
-    <div class="mb-3">
-      <label for="exampleInputId1" class="form-label">Id </label>
-      <input type="Id" class="form-control" id="exampleInputId1" aria-describedby="IdHelp" formControlName="id">
+  <div class="mb-3">
+    <label for="exampleInputId1" class="form-label">Id </label>
+    <input
+      type="Id"
+      class="form-control"
+      id="exampleInputId1"
+      aria-describedby="IdHelp"
+      formControlName="id"
+    />
+  </div>
+  <div *ngIf="this.residenceForm.get('id')?.touched">
+    <span
+      *ngIf="this.residenceForm.get('id')?.hasError('required')"
+      style="color: red"
+      >l'id est obligatoire</span
+    >
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName1" class="form-label">Name</label>
+    <input
+      type="Name"
+      class="form-control"
+      id="exampleInputName1"
+      formControlName="name"
+    />
+    <div *ngIf="name?.touched">
+      <span *ngIf="name?.hasError('required')" style="color: red"
+        >le name est obligatoire</span
+      >
+      <span *ngIf="name?.hasError('minlength')" style="color: red"
+        >le nom doit avoir au minimum 3 caractères</span
+      >
+      <span *ngIf="name?.hasError('maxlength')" style="color: red"
+        >le nom doit avoir au maximum 15 caractères</span
+      >
     </div>
-    <div class="mb-3">
-      <label for="exampleInputName1" class="form-label">Name</label>
-      <input type="Name" class="form-control" id="exampleInputName1" formControlName="name">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputAdress1" class="form-label">Adress</label>
-        <input type="Adress" class="form-control" id="exampleInputAdress1" formControlName="adress">
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputImage1" class="form-label">Image</label>
-        <input type="file" class="form-control" id="exampleInputImage1" formControlName="image">
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputSrtatus1" class="form-label">Status</label>
-        <input type="Srtatus" class="form-control" id="exampleInputSrtatus1" formControlName="status">
-      </div>
-    
-    <button type="submit" class="btn btn-primary" >Submit</button>
-  </form>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputAdress1" class="form-label">Adress</label>
+    <input
+      type="Adress"
+      class="form-control"
+      id="exampleInputAdress1"
+      formControlName="adress"
+    />
+  </div>
+
+ 
+  <div class="mb-3">
+    <label for="exampleInputImage1" class="form-label">Image</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputImage1"
+      formControlName="image"
+    />
+  </div>
+  <div *ngIf="this.residenceForm.get('image')?.touched && this.residenceForm.get('image')?.invalid">
+    <span
+      *ngIf="this.residenceForm.get('image')?.hasError('pattern')"
+      style="color: red"
+      >respecter le format</span
+    >
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputSrtatus1" class="form-label">Status</label>
+    <input
+      type="Srtatus"
+      class="form-control"
+      id="exampleInputSrtatus1"
+      formControlName="status"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="residenceForm.invalid">Submit</button>
+</form>
