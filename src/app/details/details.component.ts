@@ -8,7 +8,7 @@ import { Residence } from '../core/models/Residence';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-  id!:number;
+  name!:string;
   residence!:Residence;
   listResidences:Residence[]=[
       {id:1,"name": "El fel","address":"Borj Cedria", "image":"../../assets/images/R4.jpg", status: "Disponible"},
@@ -19,8 +19,8 @@ export class DetailsComponent {
   constructor(private acr:ActivatedRoute){}
   
   ngOnInit(){
-    this.id=this.acr.snapshot.params['param'];
-    this.residence=this.listResidences.filter(res=>res.id==this.id)[0]
+    this.name=this.acr.snapshot.params['param'];
+    this.residence=this.listResidences.filter(res=>res.name==this.name)[0]
   }
 
 }

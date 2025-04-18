@@ -1,0 +1,24 @@
+<form [formGroup]="residenceForm" (submit)="getFormValue()">
+    <div class="mb-3">
+      <label for="exampleInputId1" class="form-label">Id </label>
+      <input type="Id" class="form-control" id="exampleInputId1" aria-describedby="IdHelp" formControlName="id">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputName1" class="form-label">Name</label>
+      <input type="Name" class="form-control" id="exampleInputName1" formControlName="name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputAdress1" class="form-label">Adress</label>
+        <input type="Adress" class="form-control" id="exampleInputAdress1" formControlName="adress">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputImage1" class="form-label">Image</label>
+        <input type="file" class="form-control" id="exampleInputImage1" formControlName="image">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputSrtatus1" class="form-label">Status</label>
+        <input type="Srtatus" class="form-control" id="exampleInputSrtatus1" formControlName="status">
+      </div>
+    
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
