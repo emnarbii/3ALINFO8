@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let res of filterByAdress()">
+    <tr *ngFor="let res of listResidences">
       <td>
         <img
           [src]="res.image"
@@ -47,7 +47,7 @@
         <button
           type="button"
           class="btn btn-primary"
-         [routerLink]="['/details',res.name]"
+         [routerLink]="['/details',res.id]"
         >
           Details
         </button>

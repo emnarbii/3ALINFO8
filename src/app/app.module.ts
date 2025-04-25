@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsComponent } from './details/details.component';
 import { ResidenceFormComponent } from './residence-form/residence-form.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,13 @@ import { ResidenceFormComponent } from './residence-form/residence-form.componen
     DetailsComponent,
     ResidenceFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule,ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

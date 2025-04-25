@@ -1,0 +1,62 @@
+{
+  "residences": [
+    {
+      "id": "2",
+      "name": "El kods",
+      "address": "test",
+      "image": "../../assets/images/R4.jpg",
+      "status": "Vendu"
+    },
+    {
+      "id": "12",
+      "name": "Azeert",
+      "address": "Tunis",
+      "image": "../../assets/images/R4.jpg",
+      "status": "En Construction"
+    },
+    {
+      "id": "12",
+      "name": "Azeert",
+      "address": "Ariana",
+      "image": "../../assets/images/R4.jpg",
+      "status": "En Construction"
+    },
+    {
+      "id": "13",
+      "name": "Emna",
+      "adress": "charguia",
+      "image": "   sddd",
+      "status": "Disponible"
+    },
+    {
+      "id": "4",
+      "name": "Esprit",
+      "adress": "charguia",
+      "image": "../../assets/images/R4.jpg",
+      "status": "Vendu"
+    }
+  ],
+  "test": [
+    {
+      "id": "2",
+      "name": "El kods",
+      "address": "test",
+      "image": "../../assets/images/R3.jpg",
+      "status": "Vendu"
+    },
+    {
+      "id": "12",
+      "name": "Azeert",
+      "address": "tunis",
+      "image": "../../assets/images/R4.jpg",
+      "status": "En Construction"
+    },
+    {
+      "id": "12",
+      "name": "Azeert",
+      "address": "Ariana",
+      "image": "../../assets/images/R4.jpg",
+      "status": "En Construction"
+    }
+  ]
+}
